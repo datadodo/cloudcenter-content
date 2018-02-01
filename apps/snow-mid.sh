@@ -9,7 +9,8 @@ exec > >(tee -a /var/tmp/snow-mid-node-init_$$.log) 2>&1
 sudo yum install -y unzip
 
 cd /tmp
-curl -o mid.zip "https://install.service-now.com/glide/distribution/builds/package/mid/2018/01/03/mid.kingston-10-17-2017__patch1-12-12-2017_01-03-2018_0843.linux.x86-64.zip"sudo mkdir -p /servicenow/mid
+curl -o mid.zip "https://install.service-now.com/glide/distribution/builds/package/mid/2018/01/03/mid.kingston-10-17-2017__patch1-12-12-2017_01-03-2018_0843.linux.x86-64.zip"
+sudo mkdir -p /servicenow/mid
 sudo chown -R cliqruser:cliqruser /servicenow
 cd /servicenow/mid
 unzip /tmp/mid.zip
